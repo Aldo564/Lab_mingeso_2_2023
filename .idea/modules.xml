@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/Acopio/Acopio.iml" filepath="$PROJECT_DIR$/Acopio/Acopio.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/Lab_mingeso_2_2023.iml" filepath="$PROJECT_DIR$/.idea/Lab_mingeso_2_2023.iml" />
+      <module fileurl="file://$PROJECT_DIR$/Pep2/Pep2.iml" filepath="$PROJECT_DIR$/Pep2/Pep2.iml" />
+      <module fileurl="file://$PROJECT_DIR$/Planilla/Planilla.iml" filepath="$PROJECT_DIR$/Planilla/Planilla.iml" />
+      <module fileurl="file://$PROJECT_DIR$/Porcentaje/Porcentaje.iml" filepath="$PROJECT_DIR$/Porcentaje/Porcentaje.iml" />
+      <module fileurl="file://$PROJECT_DIR$/Proveedor/Proveedor.iml" filepath="$PROJECT_DIR$/Proveedor/Proveedor.iml" />
+    </modules>
+  </component>
+</project>

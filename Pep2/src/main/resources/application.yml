@@ -1,0 +1,21 @@
+
+server:
+  port: 8090
+
+spring:
+  application:
+    name: pep2_Mingeso
+  jpa:
+    show-sql: true
+    hibernate:
+      dialect: MySQL8Dialect
+      ddl-auto: create
+    properties:
+      hibernate:
+        format_sql: true
+  datasource:
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    dbname: mingeso12023
+    url: jdbc:mysql://localhost:3306/mingeso12023
+    username: root
+    password: password

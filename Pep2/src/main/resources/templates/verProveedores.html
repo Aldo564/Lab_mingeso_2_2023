@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>Proveedores</title>
+    <link rel = "stylesheet" href= "../static/css/style.css" type="text/css" th:href="@{/css/style.css}">
+</head>
+<body>
+<header>
+    <h1>Proveedores</h1>
+</header>
+<nav>
+    <ul>
+        <li><a href="/">Volver al menú principal</a></li>
+        <li><a href="/ingresarProveedor">Ingresar nuevo proveedor</a></li>
+    </ul>
+</nav>
+<h3 th:if="${noDataMessage}" style="color: #a44b01; text-align: center; margin: 10px 25%;"> No existen proveedores en el sistema </h3>
+<div th:unless="${noDataMessage}">
+    <h1>Lista de proveedores</h1>
+    <table th:border="1" class="content-table">
+        <thead>
+        <tr>
+            <th>Codigo</th>
+            <th>Nombre</th>
+            <th>Categoría</th>
+            <th>Retención</th>
+        </tr>
+        </thead>
+        <tbody>
+        <tr th:each="proveedores:${proveedores}">
+            <td th:text="${proveedores.codigo}"></td>
+            <td th:text="${proveedores.nombre}"></td>
+            <td th:text="${proveedores.categoria}"></td>
+            <td th:if="${proveedores.retencion}" th:text="Si"></td>
+            <td th:unless="${proveedores.retencion}" th:text="No"></td>
+        </tr>
+        </tbody>
+    </table>
+</div>
+<footer>
+    <p>Derechos reservados MilkStgo</p>
+</footer>
+</body>
+</html>
