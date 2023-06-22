@@ -19,9 +19,6 @@ public class PlanillaService {
     PlanillaRepository planillaRepository;
 
     @Autowired
-    private PlanillaService planillaService;
-
-    @Autowired
     RestTemplate restTemplate;
 
     public void guardarPlanilla(String fecha, String codigo, String nombre, String kg_leche,
@@ -342,14 +339,14 @@ public class PlanillaService {
 
         double pago_final = pago_total - retencion;
 
-        planillaService.guardarPlanilla(quincena, codigo, nombre, Integer.toString(kgs_leche), dias,
+        guardarPlanilla(quincena, codigo, nombre, Integer.toString(kgs_leche), dias,
                 Integer.toString(kgs_leche/Integer.parseInt(dias)), Double.toString(var_kg), Integer.toString(grasa), dif_grasa,
                 Integer.toString(solido), dif_solido, Integer.toString(pago_Leche), Integer.toString(pago_Grasa),
                 Integer.toString(pago_Solidos), Double.toString(pago_Frecuencia), Double.toString(var_kg),
                 Double.toString(var_grasa), Double.toString(var_solido), Double.toString(pago_total),
                 Double.toString(retencion), Double.toString(pago_final));
 
-        PlanillaEntity planilla = planillaService.getAll();
+        PlanillaEntity planilla = getAll();
 
         return planilla;
 

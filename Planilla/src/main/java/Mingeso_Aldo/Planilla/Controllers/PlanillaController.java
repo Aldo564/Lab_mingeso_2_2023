@@ -16,7 +16,7 @@ import java.util.List;
 public class PlanillaController {
 
     @Autowired
-    private PlanillaService planillaService;
+    PlanillaService planillaService;
 
     @GetMapping("/seleccionarPlanilla")
     public String main(Model model){

@@ -1,10 +1,11 @@
 package Mingeso_Aldo.Planilla.Entities;
 
-import jakarta.persistence.*;
+import com.sun.istack.NotNull;
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
-import org.jetbrains.annotations.NotNull;
+
+import javax.persistence.*;
 
 @Entity
 @Table(name = "planilla")
