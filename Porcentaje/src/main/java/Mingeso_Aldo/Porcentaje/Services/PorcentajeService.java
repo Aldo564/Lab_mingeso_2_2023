@@ -124,7 +124,8 @@ public class PorcentajeService {
         int id = obtenerCantArchivos(porcentajes);
 
         PorcentajeEntity porcentaje_Actual_Filtrado = porcentajeRepository.findFiltro(id, codigo);
-        int grasa = porcentaje_Actual_Filtrado.getGrasa();
+        int grasa = -1;
+        grasa = porcentaje_Actual_Filtrado.getGrasa();
 
         return grasa;
     }
@@ -135,7 +136,8 @@ public class PorcentajeService {
         int id = obtenerCantArchivos(porcentajes);
 
         PorcentajeEntity porcentaje_Actual_Filtrado = porcentajeRepository.findFiltro(id, codigo);
-        int solido = porcentaje_Actual_Filtrado.getSolido();
+        int solido = -1;
+        solido = porcentaje_Actual_Filtrado.getSolido();
 
         return solido;
     }

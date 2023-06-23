@@ -48,6 +48,10 @@ public class ProveedorController {
     public ResponseEntity<ProveedorEntity> findByCodigo(@PathVariable("codigo") String codigo)
     {
         ProveedorEntity proveedor = proveedorService.findByCodigo(codigo);
+        if (proveedor == null)
+        {
+            ResponseEntity.noContent().build();
+        }
         return  ResponseEntity.ok(proveedor);
     }
 
@@ -55,6 +59,10 @@ public class ProveedorController {
     public ResponseEntity<String> obtenerCategoria(@PathVariable("codigo") String codigo)
     {
         String categoria = proveedorService.obtenerCategoria(codigo);
+        if (categoria ==  null)
+        {
+            ResponseEntity.noContent().build();
+        }
         return  ResponseEntity.ok(categoria);
     }
 

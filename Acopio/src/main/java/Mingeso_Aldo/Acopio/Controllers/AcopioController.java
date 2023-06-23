@@ -48,7 +48,7 @@ public class AcopioController {
     @GetMapping("/kls/{codigo}")
     public ResponseEntity<Integer> obtenerKlsLeche(@PathVariable("codigo") String codigo)
     {
-        int kls = acopioService.kgs_leche(codigo);
+        int kls = acopioService.kgs_leche(codigo); //Como minimo entrega 0
         return ResponseEntity.ok(kls);
     }
 

@@ -38,14 +38,22 @@ public class PorcentajeController {
     @GetMapping("/grasa/{codigo}")
     public ResponseEntity<Integer> obtenerCategoria(@PathVariable("codigo") String codigo)
     {
-        Integer grasa = porcentajeService.obtenerGrasa(codigo);
+        int grasa = porcentajeService.obtenerGrasa(codigo);
+        if(grasa == -1)
+        {
+            ResponseEntity.noContent().build();
+        }
         return  ResponseEntity.ok(grasa);
     }
 
     @GetMapping("/solido/{codigo}")
     public ResponseEntity<Integer> obtenerSolido(@PathVariable("codigo") String codigo)
     {
-        Integer solido = porcentajeService.obtenerSolido(codigo);
+        int solido = porcentajeService.obtenerSolido(codigo);
+        if(solido == -1)
+        {
+            ResponseEntity.noContent().build();
+        }
         return  ResponseEntity.ok(solido);
     }
 
@@ -53,6 +61,10 @@ public class PorcentajeController {
     public ResponseEntity<String> obtenerDiferencaGrasa(@PathVariable("codigo") String codigo)
     {
         String difGrasa = porcentajeService.obtenerDiferenciaGrasa(codigo);
+        if (difGrasa.equals("0"))
+        {
+            ResponseEntity.noContent().build();
+        }
         return  ResponseEntity.ok(difGrasa);
     }
 
@@ -60,6 +72,10 @@ public class PorcentajeController {
     public ResponseEntity<String> obtenerDiferenciaSolido(@PathVariable("codigo") String codigo)
     {
         String difSolido = porcentajeService.obtenerDiferenciaSolido(codigo);
+        if (difSolido.equals("0"))
+        {
+            ResponseEntity.noContent().build();
+        }
         return  ResponseEntity.ok(difSolido);
     }
 

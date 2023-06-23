@@ -33,7 +33,6 @@ public class PlanillaController {
         return "seleccionarPlanilla";
     }
 
-
     @GetMapping("/generarPlanilla")
     public String generarPlanilla(Model model, @RequestParam("codigo") String codigo)
     {
