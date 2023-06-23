@@ -1,6 +1,7 @@
 package Mingeso_Aldo.Porcentaje.Controllers;
 
 import Mingeso_Aldo.Porcentaje.Services.PorcentajeService;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 import org.springframework.web.multipart.MultipartFile;
@@ -11,6 +12,7 @@ import org.springframework.web.servlet.mvc.support.RedirectAttributes;
 public class PorcentajeController {
 
 
+    @Autowired
     private PorcentajeService porcentajeService;
 
 

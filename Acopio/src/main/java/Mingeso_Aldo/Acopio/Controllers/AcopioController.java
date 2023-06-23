@@ -1,6 +1,7 @@
 package Mingeso_Aldo.Acopio.Controllers;
 
 import Mingeso_Aldo.Acopio.Services.AcopioService;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 import org.springframework.web.multipart.MultipartFile;
@@ -12,6 +13,7 @@ import java.util.ArrayList;
 @RequestMapping("/acopio")
 public class AcopioController {
 
+    @Autowired
     private AcopioService acopioService;
 
     @GetMapping("/subirArchivoAcopio")

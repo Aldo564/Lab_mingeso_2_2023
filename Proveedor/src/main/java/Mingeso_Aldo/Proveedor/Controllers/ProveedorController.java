@@ -3,6 +3,7 @@ package Mingeso_Aldo.Proveedor.Controllers;
 
 import Mingeso_Aldo.Proveedor.Entities.ProveedorEntity;
 import Mingeso_Aldo.Proveedor.Services.ProveedorService;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.*;
@@ -13,6 +14,7 @@ import java.util.ArrayList;
 @RequestMapping("/proveedor")
 public class ProveedorController {
 
+    @Autowired
     private ProveedorService proveedorService;
 
 
