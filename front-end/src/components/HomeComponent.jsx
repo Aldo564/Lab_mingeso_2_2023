@@ -1,17 +1,13 @@
 import React, {Component} from 'react';
-import './App.css';
 
 class HomeComponent extends Component {
-    constructor(props) {
-        super(props);
-    }
-
+    
     render() {
         return (
             <div>
                 <header>
                     <title>MilkStgo</title>
-                    </header>
+                </header>
                 <div>
                     <h1>MilkStgo 2023</h1>
                 </div>
@@ -28,11 +24,11 @@ class HomeComponent extends Component {
                         <table>
                             <tr>
                                 <th>
-                                    <h2>Bienvenidos!</h2>
+                                    <h2>¡Bienvenidos!</h2>
                                     <p>Somos MilkStgo, una empresa dedicada a la producción de comestibles a base de leche, principalmente yogurt, mantequilla y quesos. Tenemos más de 40 años produciendo productos para el mercado nacional.</p>
                                 </th>
                                 <th>
-                                    <a><img src="https://i.ibb.co/rQWMfbv/milkstgo.png" alt="milkstgo"> </img></a>
+                                    <a><img src="https://i.ibb.co/rQWMfbv/milkstgo.png" alt="milkstgo"/> </a>
                                 </th>
                             </tr>
                         </table>

@@ -8,7 +8,6 @@
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
         <module name="Proveedor" />
-        <module name="Pep2" />
         <module name="Acopio" />
         <module name="Planilla" />
         <module name="Porcentaje" />

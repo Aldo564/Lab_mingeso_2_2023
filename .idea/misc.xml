@@ -3,7 +3,6 @@
   <component name="MavenProjectsManager">
     <option name="originalFiles">
       <list>
-        <option value="$PROJECT_DIR$/Pep2/pom.xml" />
         <option value="$PROJECT_DIR$/Acopio/pom.xml" />
         <option value="$PROJECT_DIR$/Planilla/pom.xml" />
         <option value="$PROJECT_DIR$/Proveedor/pom.xml" />
