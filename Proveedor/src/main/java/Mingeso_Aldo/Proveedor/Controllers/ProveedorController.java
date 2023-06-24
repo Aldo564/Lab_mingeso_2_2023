@@ -32,18 +32,18 @@ public class ProveedorController {
         return "verProveedores";
     }
 
-    @GetMapping("/ingresarProveedor")
+    @GetMapping("/ingresar")
     public String proveedor(){
         return "ingresarProveedor";
     }
 
-    @PostMapping("/ingresarProveedor")
-    public String nuevoProveedor(@RequestParam("codigo") String codigo,
+    @PostMapping("/ingresar")
+    public ResponseEntity<Boolean> nuevoProveedor(@RequestParam("codigo") String codigo,
                                  @RequestParam("nombre") String nombre,
                                  @RequestParam("categoria") String categoria,
                                  @RequestParam("retencion") Boolean retencion){
         proveedorService.guardarProveedor(codigo, nombre, categoria, retencion);
-        return "redirect:/verProveedores";
+        return ResponseEntity.ok(true);
     }
 
     @GetMapping("/findby/{codigo}")
@@ -71,11 +71,16 @@ public class ProveedorController {
     @GetMapping("/obtener")
     public ResponseEntity<ArrayList<ProveedorEntity>> obtenerProveedores()
     {
-        ArrayList<ProveedorEntity> proveedores = proveedorService.obtenerProveedores();
+        ArrayList<ProveedorEntity> proveedores = new ArrayList<>();
+        proveedores = proveedorService.obtenerProveedores();
+        /*
         if (proveedores.isEmpty())
         {
+
             return ResponseEntity.noContent().build();
         }
+        */
+
         return  ResponseEntity.ok(proveedores);
     }
 }
