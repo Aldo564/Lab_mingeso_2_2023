@@ -9,3 +9,4 @@ spring:
         maxInterval: 10000
       enabled: true
       uri: http://localhost:8081
+
