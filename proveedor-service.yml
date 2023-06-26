@@ -1,14 +1,14 @@
 apiVersion: v1
 kind: Service
 metadata:
-  name: acopio-service
+  name: proveedor-service
   labels:
-    app: acopio-service
+    app: proveedor-service
 spec:
   selector:
-    app: acopio-deployment
+    app: proveedor-deployment
   ports:
     - protocol: TCP
-      port: 8084
-      targetPort: 8084
+      port: 8085
+      targetPort: 8085
   type: LoadBalancer

@@ -1,21 +1,21 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: acopio-deployment
+  name: proveedor-deployment
   labels:
-    app: acopio-deployment
+    app: proveedor-deployment
 spec:
   selector:
     matchLabels:
-      app: acopio-deployment
+      app: proveedor-deployment
   replicas: 2
   template:
     metadata:
       labels:
-        app: acopio-deployment
+        app: proveedor-deployment
     spec:
       containers:
-        - name: acopio
-          image: aldo564/kubernetes-acopio
+        - name: proveedor
+          image: aldo564/kubernetes-proveedor
           ports:
-            - containerPort: 8084
+            - containerPort: 8085

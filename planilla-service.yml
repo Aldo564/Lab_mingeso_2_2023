@@ -1,14 +1,14 @@
 apiVersion: v1
 kind: Service
 metadata:
-  name: acopio-service
+  name: planilla-service
   labels:
-    app: acopio-service
+    app: planilla-service
 spec:
   selector:
-    app: acopio-deployment
+    app: planilla-deployment
   ports:
     - protocol: TCP
-      port: 8084
-      targetPort: 8084
+      port: 8083
+      targetPort: 8083
   type: LoadBalancer

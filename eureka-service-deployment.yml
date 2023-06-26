@@ -1,21 +1,21 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: config-service-deployment
+  name: eureka-service-deployment
   labels:
-    app: config-service-deployment
+    app: eureka-service-deployment
 spec:
   selector:
     matchLabels:
-      app: config-service-deployment
+      app: eureka-service-deployment
   replicas: 1
   template:
     metadata:
       labels:
-        app: config-service-deployment
+        app: eureka-service-deployment
     spec:
       containers:
-        - name: config-service
-          image: aldo564/kubernetes-config-service
+        - name: eureka-service
+          image: aldo564/kubernetes-eureka-service
           ports:
-            - containerPort: 8081
+            - containerPort: 8761

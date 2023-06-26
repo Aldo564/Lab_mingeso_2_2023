@@ -1,21 +1,21 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: acopio-deployment
+  name: planilla-deployment
   labels:
-    app: acopio-deployment
+    app: planilla-deployment
 spec:
   selector:
     matchLabels:
-      app: acopio-deployment
+      app: planilla-deployment
   replicas: 2
   template:
     metadata:
       labels:
-        app: acopio-deployment
+        app: planilla-deployment
     spec:
       containers:
-        - name: acopio
-          image: aldo564/kubernetes-acopio
+        - name: planilla
+          image: aldo564/kubernetes-planilla
           ports:
-            - containerPort: 8084
+            - containerPort: 8083

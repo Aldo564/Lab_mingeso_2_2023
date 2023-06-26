@@ -1,21 +1,21 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: acopio-deployment
+  name: porcentaje-deployment
   labels:
-    app: acopio-deployment
+    app: porcentaje-deployment
 spec:
   selector:
     matchLabels:
-      app: acopio-deployment
+      app: porcentaje-deployment
   replicas: 2
   template:
     metadata:
       labels:
-        app: acopio-deployment
+        app: porcentaje-deployment
     spec:
       containers:
-        - name: acopio
-          image: aldo564/kubernetes-acopio
+        - name: porcentaje
+          image: aldo564/kubernetes-porcentaje
           ports:
-            - containerPort: 8084
+            - containerPort: 8086
