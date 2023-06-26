@@ -15,14 +15,8 @@ public class PorcentajeController {
     @Autowired
     private PorcentajeService porcentajeService;
 
-
-    @GetMapping("/subirArchivoPorcentaje")
-    public String mainPorcentaje() {
-        return "subirArchivoPorcentaje";
-    }
-
-    @PostMapping("/subirArchivoPorcentaje")
-    public String uploadPorcentaje(@RequestParam("file") MultipartFile file, RedirectAttributes redirectAttributes) {
+    @PostMapping
+    public ResponseEntity<Boolean> uploadPorcentaje(@RequestParam("file") MultipartFile file, RedirectAttributes redirectAttributes) {
         porcentajeService.guardar(file);
         boolean correcto = porcentajeService.leerCsvPorcentaje(file.getOriginalFilename());
         if (correcto)
@@ -34,11 +28,11 @@ public class PorcentajeController {
             redirectAttributes.addFlashAttribute("mensaje", "Verifique el archivo que esta subiendo");
         }
 
-        return "redirect:/subirArchivoPorcentaje";
+        return ResponseEntity.ok(correcto);
     }
 
     @GetMapping("/grasa/{codigo}")
-    public ResponseEntity<Integer> obtenerCategoria(@PathVariable("codigo") String codigo)
+    public ResponseEntity<Integer> obtenerGrasa(@PathVariable("codigo") String codigo)
     {
         int grasa = porcentajeService.obtenerGrasa(codigo);
         if(grasa == -1)
@@ -59,7 +53,7 @@ public class PorcentajeController {
         return  ResponseEntity.ok(solido);
     }
 
-    @GetMapping("/diGrasa/{codigo}")
+    @GetMapping("/difGrasa/{codigo}")
     public ResponseEntity<String> obtenerDiferencaGrasa(@PathVariable("codigo") String codigo)
     {
         String difGrasa = porcentajeService.obtenerDiferenciaGrasa(codigo);

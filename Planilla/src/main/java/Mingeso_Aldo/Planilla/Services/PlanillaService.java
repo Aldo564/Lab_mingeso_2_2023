@@ -57,7 +57,7 @@ public class PlanillaService {
 
     public PlanillaEntity getAll()
     {
-        return planillaRepository.find();
+        return planillaRepository.find().get(0);
     }
 
     @Generated
@@ -249,7 +249,7 @@ public class PlanillaService {
     }
 
     public ProveedorModel findByCodigo(String codigo) {
-        ProveedorModel proveedor = restTemplate.getForObject("http://proveedor-service/proveedor/findBy/" + codigo, ProveedorModel.class);
+        ProveedorModel proveedor = restTemplate.getForObject("http://proveedor-service/proveedor/findby/" + codigo, ProveedorModel.class);
         return proveedor;
     }
 

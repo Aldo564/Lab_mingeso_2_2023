@@ -16,13 +16,8 @@ public class AcopioController {
     @Autowired
     private AcopioService acopioService;
 
-    @GetMapping("/subirArchivoAcopio")
-    public String mainAcopio() {
-        return "subirArchivoAcopio";
-    }
-
-    @PostMapping("/subirArchivoAcopio")
-    public String uploadAcopio(@RequestParam("file") MultipartFile file, RedirectAttributes redirectAttributes) {
+    @PostMapping
+    public ResponseEntity<Boolean> uploadAcopio(@RequestParam("file") MultipartFile file, RedirectAttributes redirectAttributes) {
         acopioService.guardar(file);
         boolean correcto = acopioService.leerCsvAcopio(file.getOriginalFilename());
         if (correcto)
@@ -34,7 +29,7 @@ public class AcopioController {
             redirectAttributes.addFlashAttribute("mensaje", "Verifique el archivo que esta subiendo");
         }
 
-        return "redirect:/subirArchivoAcopio";
+        return ResponseEntity.ok(correcto);
     }
 
     @GetMapping("/fechas/{codigo}")

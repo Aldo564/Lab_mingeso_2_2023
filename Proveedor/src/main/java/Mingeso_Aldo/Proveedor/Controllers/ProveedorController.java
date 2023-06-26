@@ -5,7 +5,6 @@ import Mingeso_Aldo.Proveedor.Entities.ProveedorEntity;
 import Mingeso_Aldo.Proveedor.Services.ProveedorService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
-import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.*;
 
 import java.util.ArrayList;
@@ -16,26 +15,6 @@ public class ProveedorController {
 
     @Autowired
     private ProveedorService proveedorService;
-
-
-    @GetMapping("/verProveedores")
-    public String listar(Model model) {
-        ArrayList<ProveedorEntity> proveedores = proveedorService.obtenerProveedores();
-        if(proveedores.isEmpty())
-        {
-            model.addAttribute("noDataMessage", "No existen proveedores en el sistema");
-        }
-        else
-        {
-            model.addAttribute("proveedores", proveedores);
-        }
-        return "verProveedores";
-    }
-
-    @GetMapping("/ingresar")
-    public String proveedor(){
-        return "ingresarProveedor";
-    }
 
     @PostMapping("/ingresar")
     public ResponseEntity<Boolean> nuevoProveedor(@RequestParam("codigo") String codigo,

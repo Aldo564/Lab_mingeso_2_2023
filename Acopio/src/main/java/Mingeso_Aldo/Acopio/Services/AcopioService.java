@@ -78,7 +78,7 @@ public class AcopioService {
             ID_ARCHIVO_ACOPIO++;
             return true;
         }catch(Exception e){
-            System.err.println("No se encontro el archivo");
+            System.err.println(e);
         }finally{
             if(bf != null){
                 try{
