@@ -14,23 +14,25 @@ class HomeComponent extends Component {
                 <nav>
                     <ul>
                         <li><a href="/verProveedores">Ver Proveedores</a></li>
-                        <li><a href="/subirArchivoAcopio">Importar datos de acopio</a></li>
-                        <li><a href="/subirArchivoPorcentaje">Importar datos de porcentajes de grasa y solido</a></li>
-                        <li><a href="/seleccionarPlanilla">Generar planilla de pago</a></li>
+                        <li><a href="/subirAcopio">Importar datos de acopio</a></li>
+                        <li><a href="/subirPorcentaje">Importar datos de porcentajes de grasa y solido</a></li>
+                        <li><a href="/generarPlanilla">Generar planilla de pago</a></li>
                     </ul>
                 </nav>
                 <main>
                     <div>
-                        <table>
-                            <tr>
-                                <th>
-                                    <h2>¡Bienvenidos!</h2>
-                                    <p>Somos MilkStgo, una empresa dedicada a la producción de comestibles a base de leche, principalmente yogurt, mantequilla y quesos. Tenemos más de 40 años produciendo productos para el mercado nacional.</p>
-                                </th>
-                                <th>
-                                    <a><img src="https://i.ibb.co/rQWMfbv/milkstgo.png" alt="milkstgo"/> </a>
-                                </th>
-                            </tr>
+                        <table> 
+                            <tbody>
+                                <tr>
+                                    <th>
+                                        <h2>¡Bienvenidos!</h2>
+                                        <p>Somos MilkStgo, una empresa dedicada a la producción de comestibles a base de leche, principalmente yogurt, mantequilla y quesos. Tenemos más de 40 años produciendo productos para el mercado nacional.</p>
+                                    </th>
+                                    <th>
+                                        <a><img src="https://i.ibb.co/rQWMfbv/milkstgo.png" alt="milkstgo"/> </a>
+                                    </th>
+                                </tr>
+                            </tbody>
                         </table>
                     </div>
                 </main>
